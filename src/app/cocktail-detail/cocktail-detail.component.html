@@ -1,0 +1,26 @@
+<div *ngIf="cocktail" class="cocktail-detail">
+  <div class="cocktail-image">
+    <img [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}">
+  </div>
+  <div class="cocktail-info">
+    <h3>{{ cocktail.strDrink }}</h3>
+    <p>Categoria: {{ cocktail.strCategory }}</p>
+    <p>Alcolico: {{ cocktail.strAlcoholic }}</p>
+    <p>Tipo di bicchiere: {{ cocktail.strGlass }}</p>
+  </div>
+  <div class="cocktail-ingredients">
+    <h4>Ingredienti:</h4>
+    <ul>
+      <li>{{ cocktail.strMeasure1 }} {{ cocktail.strIngredient1 }}</li>
+      <li>{{ cocktail.strMeasure2 }} {{ cocktail.strIngredient2 }}</li>
+      <li>{{ cocktail.strMeasure3 }} {{ cocktail.strIngredient3 }}</li>
+    </ul>
+  </div>
+  <div class="cocktail-instructions">
+    <h4>Istruzioni:</h4>
+    <p>{{ cocktail.strInstructions }}</p>
+  </div>
+</div>
+<div *ngIf="!cocktail">
+  <p>Qualcosa è andato storto</p>
+</div>

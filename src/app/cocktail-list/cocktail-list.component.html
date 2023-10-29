@@ -1,0 +1,12 @@
+<div class="cocktail-list">
+  <div class="cocktail-card" *ngFor="let cocktail of cocktails">
+    <a [routerLink]="['/cocktails', cocktail.idDrink]">
+      <div class="cocktail-thumbnail">
+        <img [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}">
+      </div>
+      <div class="cocktail-info">
+        <h3>{{ cocktail.strDrink }}</h3>
+      </div>
+    </a>
+  </div>
+</div>
